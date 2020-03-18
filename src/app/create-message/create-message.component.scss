@@ -1,9 +1,14 @@
 .create-message {
     border: 1px solid #e0e0e0;
-    margin-top: 20px;
+    margin: 35px 0;
     padding: 20px;
     
     .example-full-width {
         width: 100%;
+    }
+
+    .btn-send  {
+      background-color: #3fb574; 
+      color: white; 
     }
 }

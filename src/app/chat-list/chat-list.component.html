@@ -1,21 +1,22 @@
 <div class="chat-list">
-  <ul class="list-group">
+  <div class="list-group">
     <ng-container *ngIf="userId; else pleaseRegister">
-      <li class="list-group-item" *ngFor="let message of (messages$ | async)">
+      <div class="list-group-item" *ngFor="let message of (messages$ | async)">
         <div>
           <h4>{{ (user$ | async)?.firstName }} {{ (user$ | async)?.lastName }}
-            <small class="date">{{ message.createdAt | date: 'mm/dd/yyyy hh/mm'}}</small>
+            <small class="date">{{ message.createdAt | date: 'mm/dd/yyyy hh:mm'}}</small>
           </h4>
           <p>
             {{ message.message }}
           </p>
         </div>
-      </li>
+      </div>
+      
     </ng-container>
-    <ng-template #pleaseRegister>
-        <div class="list-group-item">
-            <h1>Please Register First</h1>
-        </div>
-    </ng-template>
-  </ul>
+  </div>
+  <ng-template #pleaseRegister>
+    <div class="list-group-item">
+        <h1>Please Register First</h1>
+    </div>
+</ng-template>
 </div>
