@@ -1,0 +1,17 @@
+<div class="create-message">
+  <form #createForm="ngForm" (ngSubmit)="createMessage(createForm)"  *ngIf="userId; else pleaseRegister">
+    <div class="from-group">
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" name="message" ngModel>
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" type="submit">Send</button>
+    </div>
+  </form>
+  <ng-template #pleaseRegister>
+    <div class="list-group-item">
+        <h1>Please Register</h1>
+    </div>
+</ng-template>
+</div>

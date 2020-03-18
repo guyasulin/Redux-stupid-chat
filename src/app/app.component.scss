@@ -1,0 +1,21 @@
+.container {
+    
+    .title {
+        text-align: center;
+    }
+
+    .chat {
+        display: flex;
+        justify-content: space-around;
+        .leftUser,
+        .rightUser {
+            width: 25%;
+            padding: 20px 30px;
+            box-sizing: border-box;
+        }
+    }
+
+    hr {
+        border: 0.8px solid #e0e0e0;
+    }
+}

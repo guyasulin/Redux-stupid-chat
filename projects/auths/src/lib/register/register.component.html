@@ -1,0 +1,17 @@
+<div class="register">
+  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput ngModel type="text" name="firstName" placeholder="First Name" >
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <input matInput ngModel type="text" name="lastName"  placeholder="Last Name" >
+      </mat-form-field>
+    </div>
+    <div>
+      <button type="submit" mat-raised-button color="primary">Register</button>
+    </div>
+  </form>
+</div>
